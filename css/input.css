@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'alkanz';
+  src: url('../assets/fonts/Al-Kanz.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'islamic';
+  src: url('../assets/fonts/islamic.ttf') format('truetype');
+}
+/* Your custom global variables */
+:root {
+  --primary: var(--color-blue-100);
+  --secondary: var(--color-sky-950);
+  --tertiary: var(--color-sky-200);
+}
+
+
+
+body {
+  background: var(--primary);
+}
+.dulhan{
+  @apply h-24 left-10 top-36 absolute
+}
+.dulha{
+  @apply h-24 right-10 top-36 absolute
+}
+
+.writings{
+  @apply absolute md:top-20 top-[148px] w-full flex flex-col items-center justify-center text-center;
+  font-family: 'alkanz';
+  animation: fade-in linear 3s;
+  opacity: 1;
+  color: var(--secondary)
+}
+
+.invite-text{
+  @apply text-xl drop-shadow-lg;
+}
+.details-text{
+  @apply text-lg
+}
+.tomb{
+    @apply w-full h-96 object-fill;
+}
+.fade-container {
+    position: relative;
+}
+.fade-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust to control the fade area */
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--primary) 70%);
+    pointer-events: none; /* Allows interaction with the image */
+}
+.lantern{
+    @apply absolute top-0 right-6 w-52 h-96 object-cover;
+    animation: swing 1.2s ease-in-out infinite;
+    transform-origin: top center;
+}
+.lantern2{
+    @apply absolute top-0 right-56 w-16 h-44 object-cover;
+    animation: swing 1.1s ease-in-out infinite;
+    transform-origin: top center;
+}
+.lantern3{
+    @apply absolute top-0 right-36 w-12 h-32 object-cover;
+    animation: swing 1s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+article{
+  @apply mt-1.5 flex gap-2 w-56 items-center justify-center font-serif text-left;
+}
+
+main{
+  @apply flex gap-5 text-lg
+}
+
+@keyframes swing {
+  0%   { transform: rotate(3deg); }
+  50%  { transform: rotate(-3deg); }
+  100% { transform: rotate(3deg); }
+}
+
+@keyframes fade-in{
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+#rsvpForm {
+  opacity: 0;
+}
+
+
+
+@keyframes arrow-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.arrow-container{
+  position:absolute;
+  bottom:10px;
+  display:flex;
+  align-items:center;
+  z-index:50;
+  right: 75%;
+  animation: arrow-bounce 1s infinite;
+}
+.arrow{
+  color: var(--secondary);
+}
+.arrow-text{
+  width: 80%;
+  font-size:12px;
+  color: var(--secondary);
+  transform: rotate(90deg) translateX(-35px) translateY(15px);
+  transform-origin: left center;
+  margin:0;
+  
+}
