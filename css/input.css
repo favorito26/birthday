@@ -1,7 +1,8 @@
 @import "tailwindcss";
+@import "./balloons.css";
 @font-face {
   font-family: 'alkanz';
-  src: url('../assets/fonts/Al-Kanz.ttf') format('truetype');
+  src: url('../assets/fonts/Alatsi/Alatsi-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'islamic';
@@ -56,21 +57,7 @@ body {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--primary) 70%);
     pointer-events: none; /* Allows interaction with the image */
 }
-.lantern{
-    @apply absolute top-0 right-6 w-52 h-96 object-cover;
-    animation: swing 1.2s ease-in-out infinite;
-    transform-origin: top center;
-}
-.lantern2{
-    @apply absolute top-0 right-56 w-16 h-44 object-cover;
-    animation: swing 1.1s ease-in-out infinite;
-    transform-origin: top center;
-}
-.lantern3{
-    @apply absolute top-0 right-36 w-12 h-32 object-cover;
-    animation: swing 1s ease-in-out infinite;
-    transform-origin: top center;
-}
+
 
 article{
   @apply mt-1.5 flex gap-2 w-56 items-center justify-center font-serif text-left;
@@ -130,4 +117,21 @@ main{
   transform-origin: left center;
   margin:0;
   
+}
+
+#floating-balloons {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 4; /* below text, above background */
+}
+
+.float-balloon {
+  position: absolute;
+  bottom: -60px;
+  width: 14px;
+  height: 32px;
+  opacity: 0.85;
+  will-change: transform;
 }
