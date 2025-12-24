@@ -42,7 +42,7 @@ body {
   @apply text-lg
 }
 .tomb{
-    @apply w-full h-96 object-fill;
+    @apply mt-10 w-full h-80 object-fill;
 }
 .fade-container {
     position: relative;
@@ -119,19 +119,3 @@ main{
   
 }
 
-#floating-balloons {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 4; /* below text, above background */
-}
-
-.float-balloon {
-  position: absolute;
-  bottom: -60px;
-  width: 14px;
-  height: 32px;
-  opacity: 0.85;
-  will-change: transform;
-}

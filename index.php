@@ -20,7 +20,7 @@ $guest = $q->fetch_assoc();
 
 <body>
   <div class="fade-container">
-    <img src="./assets/tomb.jpg" class="tomb" alt="" />
+    <img src="./assets/space.jpg" class="tomb" alt="" />
   </div>
 
   <div>

@@ -813,7 +813,8 @@ body {
   line-height: var(--tw-leading, var(--text-lg--line-height));
 }
 .tomb {
-  height: calc(var(--spacing) * 96);
+  margin-top: calc(var(--spacing) * 10);
+  height: calc(var(--spacing) * 80);
   width: 100%;
   object-fit: fill;
 }
@@ -895,21 +896,6 @@ main {
   transform: rotate(90deg) translateX(-35px) translateY(15px);
   transform-origin: left center;
   margin: 0;
-}
-#floating-balloons {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 4;
-}
-.float-balloon {
-  position: absolute;
-  bottom: -60px;
-  width: 14px;
-  height: 32px;
-  opacity: 0.85;
-  will-change: transform;
 }
 @property --tw-rotate-x {
   syntax: "*";
