@@ -2,11 +2,15 @@
 @import "./balloons.css";
 @font-face {
   font-family: 'alkanz';
-  src: url('../assets/fonts/Alatsi/Alatsi-Regular.ttf') format('truetype');
+  src: url('../assets/fonts/Spotlight.otf') format('truetype');
 }
 @font-face {
   font-family: 'islamic';
-  src: url('../assets/fonts/islamic.ttf') format('truetype');
+  src: url('../assets/fonts/Balqis.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'alatsi';
+  src: url('../assets/fonts/Alatsi/Alatsi-Regular.ttf') format('truetype');
 }
 /* Your custom global variables */
 :root {
@@ -29,20 +33,23 @@ body {
 
 .writings{
   @apply absolute md:top-20 top-[148px] w-full flex flex-col items-center justify-center text-center;
-  font-family: 'alkanz';
   animation: fade-in linear 3s;
   opacity: 1;
-  color: var(--secondary)
+  color: var(--secondary);
+  font-weight: 100
 }
 
 .invite-text{
   @apply text-xl drop-shadow-lg;
+  font-family: 'alkanz'
 }
 .details-text{
-  @apply text-lg
+  @apply text-2xl;
+  font-family: 'islamic';
+  font-weight: bold;
 }
 .tomb{
-    @apply mt-10 w-full h-80 object-fill;
+    @apply w-full h-80 object-fill;
 }
 .fade-container {
     position: relative;
@@ -54,24 +61,21 @@ body {
     left: 0;
     width: 100%; /* Adjust to control the fade area */
     height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--primary) 70%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--primary) 100%);
     pointer-events: none; /* Allows interaction with the image */
 }
 
 
 article{
   @apply mt-1.5 flex gap-2 w-56 items-center justify-center font-serif text-left;
+  font-family: 'alatsi';
 }
 
 main{
   @apply flex gap-5 text-lg
 }
 
-@keyframes swing {
-  0%   { transform: rotate(3deg); }
-  50%  { transform: rotate(-3deg); }
-  100% { transform: rotate(3deg); }
-}
+
 
 @keyframes fade-in{
   0% {

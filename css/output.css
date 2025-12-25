@@ -8,16 +8,18 @@
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-900: oklch(41.4% 0.112 45.904);
     --color-sky-200: oklch(90.1% 0.058 230.902);
     --color-sky-950: oklch(29.3% 0.066 243.157);
     --color-blue-100: oklch(93.2% 0.032 255.585);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 0.15);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -206,14 +208,18 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .bg-amber-900 {
-    background-color: var(--color-amber-900);
+  .bg-slate-900 {
+    background-color: var(--color-slate-900);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
   .text-center {
     text-align: center;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-white {
     color: var(--color-white);
@@ -377,7 +383,7 @@
   --tw-scale-y: 200%;
   --tw-scale-z: 200%;
   scale: var(--tw-scale-x) var(--tw-scale-y);
-  overflow: hidden;
+  overflow: auto;
   object-fit: cover;
   @media (width >= 48rem) {
     --tw-scale-x: 100%;
@@ -386,10 +392,11 @@
     scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   transform-origin: top center;
-  animation: swing 1.1s ease-in-out infinite;
+  animation: swing 0.5s ease-in-out infinite;
 }
 .balloon {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 6);
   height: calc(var(--spacing) * 20);
   width: calc(var(--spacing) * 8);
@@ -397,12 +404,13 @@
     height: calc(var(--spacing) * 48);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 20);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1s;
 }
 .balloon2 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 6);
   height: calc(var(--spacing) * 20);
   width: calc(var(--spacing) * 8);
@@ -410,49 +418,53 @@
     height: calc(var(--spacing) * 40);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 16);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1.2s;
 }
 .balloon3 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 10);
-  height: calc(var(--spacing) * 22);
-  width: calc(var(--spacing) * 9);
+  height: calc(var(--spacing) * 14);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 44);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 18);
+    width: calc(var(--spacing) * 8);
   }
 }
 .balloon4 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 14);
   height: calc(var(--spacing) * 18);
-  width: calc(var(--spacing) * 7);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 36);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 14);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 0.9s;
 }
 .balloon5 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 20);
-  height: calc(var(--spacing) * 24);
-  width: calc(var(--spacing) * 10);
+  height: calc(var(--spacing) * 16);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 48);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 20);
+    width: calc(var(--spacing) * 8);
   }
 }
 .balloon6 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 28);
   height: calc(var(--spacing) * 20);
   width: calc(var(--spacing) * 8);
@@ -460,49 +472,53 @@
     height: calc(var(--spacing) * 40);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 16);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1.3s;
 }
 .balloon7 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 36);
-  height: calc(var(--spacing) * 22);
-  width: calc(var(--spacing) * 9);
+  height: calc(var(--spacing) * 14);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 44);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 18);
+    width: calc(var(--spacing) * 8);
   }
 }
 .balloon8 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 44);
   height: calc(var(--spacing) * 18);
-  width: calc(var(--spacing) * 7);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 36);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 14);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1s;
 }
 .balloon9 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 52);
-  height: calc(var(--spacing) * 24);
-  width: calc(var(--spacing) * 10);
+  height: calc(var(--spacing) * 16);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 48);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 20);
+    width: calc(var(--spacing) * 8);
   }
 }
 .balloon10 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 60);
   height: calc(var(--spacing) * 20);
   width: calc(var(--spacing) * 8);
@@ -510,49 +526,53 @@
     height: calc(var(--spacing) * 40);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 16);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1.1s;
 }
 .balloon11 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 68);
-  height: calc(var(--spacing) * 22);
-  width: calc(var(--spacing) * 9);
+  height: calc(var(--spacing) * 14);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 44);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 18);
+    width: calc(var(--spacing) * 8);
   }
 }
 .balloon12 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 76);
   height: calc(var(--spacing) * 18);
-  width: calc(var(--spacing) * 7);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 36);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 14);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 0.95s;
 }
 .balloon13 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 84);
-  height: calc(var(--spacing) * 24);
-  width: calc(var(--spacing) * 10);
+  height: calc(var(--spacing) * 16);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 48);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 20);
+    width: calc(var(--spacing) * 8);
   }
 }
 .balloon14 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: calc(var(--spacing) * 92);
   height: calc(var(--spacing) * 20);
   width: calc(var(--spacing) * 8);
@@ -560,49 +580,53 @@
     height: calc(var(--spacing) * 40);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 16);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1.25s;
 }
 .balloon15 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 25rem;
-  height: calc(var(--spacing) * 22);
-  width: calc(var(--spacing) * 9);
+  height: calc(var(--spacing) * 14);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 44);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 18);
+    width: calc(var(--spacing) * 8);
   }
 }
 .balloon16 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 28rem;
   height: calc(var(--spacing) * 18);
-  width: calc(var(--spacing) * 7);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 36);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 14);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1s;
 }
 .balloon17 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 31rem;
-  height: calc(var(--spacing) * 24);
-  width: calc(var(--spacing) * 10);
+  height: calc(var(--spacing) * 16);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 48);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 20);
+    width: calc(var(--spacing) * 8);
   }
 }
 .balloon18 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 34rem;
   height: calc(var(--spacing) * 20);
   width: calc(var(--spacing) * 8);
@@ -610,49 +634,53 @@
     height: calc(var(--spacing) * 40);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 16);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1.15s;
 }
 .balloon19 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 37rem;
-  height: calc(var(--spacing) * 22);
-  width: calc(var(--spacing) * 9);
+  height: calc(var(--spacing) * 14);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 44);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 18);
+    width: calc(var(--spacing) * 8);
   }
 }
 .balloon20 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 40rem;
   height: calc(var(--spacing) * 18);
-  width: calc(var(--spacing) * 7);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 36);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 14);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 0.9s;
 }
 .balloon21 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 43rem;
-  height: calc(var(--spacing) * 24);
-  width: calc(var(--spacing) * 10);
+  height: calc(var(--spacing) * 16);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 48);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 20);
+    width: calc(var(--spacing) * 8);
   }
 }
 .balloon22 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 46rem;
   height: calc(var(--spacing) * 20);
   width: calc(var(--spacing) * 8);
@@ -660,24 +688,26 @@
     height: calc(var(--spacing) * 40);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 16);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1.3s;
 }
 .balloon23 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 49rem;
-  height: calc(var(--spacing) * 22);
-  width: calc(var(--spacing) * 9);
+  height: calc(var(--spacing) * 14);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 44);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 18);
+    width: calc(var(--spacing) * 8);
   }
 }
 .balloon24 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 52rem;
   height: calc(var(--spacing) * 20);
   width: calc(var(--spacing) * 8);
@@ -685,51 +715,55 @@
     height: calc(var(--spacing) * 40);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 16);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1.05s;
 }
 .balloon25 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 55rem;
-  height: calc(var(--spacing) * 24);
-  width: calc(var(--spacing) * 10);
+  height: calc(var(--spacing) * 16);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 48);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 20);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1.2s;
 }
 .balloon26 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 58rem;
   height: calc(var(--spacing) * 18);
-  width: calc(var(--spacing) * 7);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 36);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 14);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 0.95s;
 }
 .balloon27 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 61rem;
-  height: calc(var(--spacing) * 22);
-  width: calc(var(--spacing) * 9);
+  height: calc(var(--spacing) * 14);
+  width: calc(var(--spacing) * 8);
   @media (width >= 48rem) {
     height: calc(var(--spacing) * 44);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 18);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1.1s;
 }
 .balloon28 {
   position: absolute;
+  top: calc(var(--spacing) * 0);
   right: 64rem;
   height: calc(var(--spacing) * 20);
   width: calc(var(--spacing) * 8);
@@ -737,7 +771,7 @@
     height: calc(var(--spacing) * 40);
   }
   @media (width >= 48rem) {
-    width: calc(var(--spacing) * 16);
+    width: calc(var(--spacing) * 8);
   }
   animation-duration: 1.3s;
 }
@@ -756,13 +790,28 @@
   opacity: 0.85;
   will-change: transform;
 }
+@keyframes swing {
+  0% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
 @font-face {
   font-family: 'alkanz';
-  src: url('../assets/fonts/Alatsi/Alatsi-Regular.ttf') format('truetype');
+  src: url('../assets/fonts/Spotlight.otf') format('truetype');
 }
 @font-face {
   font-family: 'islamic';
-  src: url('../assets/fonts/islamic.ttf') format('truetype');
+  src: url('../assets/fonts/Balqis.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'alatsi';
+  src: url('../assets/fonts/Alatsi/Alatsi-Regular.ttf') format('truetype');
 }
 :root {
   --primary: var(--color-blue-100);
@@ -796,10 +845,10 @@ body {
   @media (width >= 48rem) {
     top: calc(var(--spacing) * 20);
   }
-  font-family: 'alkanz';
   animation: fade-in linear 3s;
   opacity: 1;
   color: var(--secondary);
+  font-weight: 100;
 }
 .invite-text {
   font-size: var(--text-xl);
@@ -807,13 +856,15 @@ body {
   --tw-drop-shadow-size: drop-shadow(0 4px 4px var(--tw-drop-shadow-color, rgb(0 0 0 / 0.15)));
   --tw-drop-shadow: drop-shadow(var(--drop-shadow-lg));
   filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  font-family: 'alkanz';
 }
 .details-text {
-  font-size: var(--text-lg);
-  line-height: var(--tw-leading, var(--text-lg--line-height));
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  font-family: 'islamic';
+  font-weight: bold;
 }
 .tomb {
-  margin-top: calc(var(--spacing) * 10);
   height: calc(var(--spacing) * 80);
   width: 100%;
   object-fit: fill;
@@ -828,7 +879,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--primary) 70%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--primary) 100%);
   pointer-events: none;
 }
 article {
@@ -840,23 +891,13 @@ article {
   gap: calc(var(--spacing) * 2);
   text-align: left;
   font-family: var(--font-serif);
+  font-family: 'alatsi';
 }
 main {
   display: flex;
   gap: calc(var(--spacing) * 5);
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
-}
-@keyframes swing {
-  0% {
-    transform: rotate(3deg);
-  }
-  50% {
-    transform: rotate(-3deg);
-  }
-  100% {
-    transform: rotate(3deg);
-  }
 }
 @keyframes fade-in {
   0% {

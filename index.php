@@ -24,44 +24,25 @@ $guest = $q->fetch_assoc();
   </div>
 
   <div>
-    <img src="./assets/balloons.png" class="balloon-base balloon" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon2" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon3" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon4" alt="" />
     <img src="./assets/balloons.png" class="balloon-base balloon5" alt="" />
     <img src="./assets/balloons.png" class="balloon-base balloon6" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon7" alt="" />
     <img src="./assets/balloons.png" class="balloon-base balloon8" alt="" />
     <img src="./assets/balloons.png" class="balloon-base balloon9" alt="" />
     <img src="./assets/balloons.png" class="balloon-base balloon10" alt="" />
     <img src="./assets/balloons.png" class="balloon-base balloon11" alt="" />
     <img src="./assets/balloons.png" class="balloon-base balloon12" alt="" />
     <img src="./assets/balloons.png" class="balloon-base balloon13" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon14" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon15" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon16" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon17" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon18" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon19" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon20" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon21" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon22" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon23" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon24" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon25" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon26" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon27" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon28" alt="" />
   </div>
 
   <!-- floating balloons from bottom -->
   <div id="floating-balloons"></div>
 
   <section class="writings">
-    <p class="details-text"> </p>
+    <p class="details-text text-2xl"> SAVE THE DATE  </p>
     <p class="invite-text">
-
+      By the grace and the dua mubarak of our beloved Aqa Maula T.U.S we cordially invite you to the celebration of
     </p>
+    <img src="./assets/1.png" alt="">
     <article>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +146,7 @@ $guest = $q->fetch_assoc();
       type="submit"
       name="status"
       value="Accepted"
-      class="bg-amber-900 text-white p-5 mt-3">
+      class="bg-slate-900 text-white p-5 mt-3">
       Inshaallah I will attend
     </button>
 
@@ -173,7 +154,7 @@ $guest = $q->fetch_assoc();
       type="submit"
       name="status"
       value="Declined"
-      class="bg-amber-900 text-white p-5 mt-3">
+      class="bg-slate-900 text-white p-5 mt-3">
       We are there by our heart, Mubarak mohannah
     </button>
   </form>
