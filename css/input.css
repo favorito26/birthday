@@ -33,7 +33,7 @@ body {
 
 .writings{
   @apply absolute md:top-20 top-[148px] z-10 w-full flex flex-col items-center justify-center text-center;
-  animation: fade-in linear 3s;
+  animation: fade-in linear 1.5s;
   opacity: 1;
   color: var(--secondary);
   font-weight: 100
