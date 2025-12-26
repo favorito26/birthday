@@ -54,17 +54,39 @@
       }
     });
 
-    window.addEventListener("touchmove", (e) => {
-      let touch = e.touches[0];
-      if (!this.lastTouch) this.lastTouch = touch.clientY;
+let startY = 0;
+let isHidden = false;
+const SWIPE_THRESHOLD = 70; // 👈 adjust for feel
 
-      if (touch.clientY < this.lastTouch) {
-        hideText(); // swipe up (scroll down)
-      } else {
-        showText(); // swipe down
-      }
-      this.lastTouch = touch.clientY;
-    });
+window.addEventListener("touchstart", (e) => {
+  startY = e.touches[0].clientY;
+});
+
+window.addEventListener("touchmove", (e) => {
+  if (!startY) return;
+
+  const currentY = e.touches[0].clientY;
+  const diff = startY - currentY;
+
+  // Ignore tiny movements
+  if (Math.abs(diff) < SWIPE_THRESHOLD) return;
+
+  if (diff > 0 && !isHidden) {
+    hideText();        // swipe UP → go next
+    isHidden = true;
+  } 
+  else if (diff < 0 && isHidden) {
+    showText();        // swipe DOWN → go back
+    isHidden = false;
+  }
+
+  // Lock until touch ends
+  startY = null;
+});
+
+window.addEventListener("touchend", () => {
+  startY = 0;
+});
 
 
 
@@ -76,7 +98,7 @@ function createFloatingBalloon() {
   el.src = BALLOON_SRC;
   el.className = "float-balloon";
 
-  const x = gsap.utils.random(0, window.innerWidth);
+  const x = gsap.utils.random(0, window.outerWidth);
   const scale = gsap.utils.random(1.25, 1.5);
   const duration = gsap.utils.random(8, 14);
   const drift = gsap.utils.random(-40, 40);

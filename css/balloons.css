@@ -2,48 +2,7 @@
 
 /* Phone sizes first, scale up on md+ */
 
-.balloon-base {
-  @apply absolute top-0 scale-200 md:scale-100 object-cover overflow-auto;
-  transform-origin: top center;
-  animation: swing 0.5s ease-in-out infinite;
-}
 
-
-.balloon  { @apply absolute top-0 right-6   w-8 h-20 md:w-8 md:h-48; animation-duration: 1s; }
-.balloon2  { @apply absolute top-0 right-6   w-8  h-20 md:w-8 md:h-40; animation-duration: 1.2s; }
-.balloon3  { @apply absolute top-0 right-10  w-8  h-14 md:w-8 md:h-44; }
-
-.balloon4  { @apply absolute top-0 right-14  w-8  h-18 md:w-8 md:h-36; animation-duration: 0.9s; }
-.balloon5  { @apply absolute top-0 right-20  w-8 h-16 md:w-8 md:h-48; }
-.balloon6  { @apply absolute top-0 right-28  w-8  h-20 md:w-8 md:h-40; animation-duration: 1.3s; }
-
-.balloon7  { @apply absolute top-0 right-36  w-8  h-14 md:w-8 md:h-44; }
-.balloon8  { @apply absolute top-0 right-44  w-8  h-18 md:w-8 md:h-36; animation-duration: 1s; }
-.balloon9  { @apply absolute top-0 right-52  w-8 h-16 md:w-8 md:h-48; }
-
-.balloon10 { @apply absolute top-0 right-60  w-8  h-20 md:w-8 md:h-40; animation-duration: 1.1s; }
-.balloon11 { @apply absolute top-0 right-68  w-8  h-14 md:w-8 md:h-44; }
-.balloon12 { @apply absolute top-0 right-76  w-8  h-18 md:w-8 md:h-36; animation-duration: 0.95s; }
-
-.balloon13 { @apply absolute top-0 right-84  w-8 h-16 md:w-8 md:h-48; }
-.balloon14 { @apply absolute top-0 right-92  w-8  h-20 md:w-8 md:h-40; animation-duration: 1.25s; }
-.balloon15 { @apply absolute top-0 right-[25rem] w-8 h-14 md:w-8 md:h-44; }
-
-.balloon16 { @apply absolute top-0 right-[28rem] w-8 h-18 md:w-8 md:h-36; animation-duration: 1s; }
-.balloon17 { @apply absolute top-0 right-[31rem] w-8 h-16 md:w-8 md:h-48; }
-.balloon18 { @apply absolute top-0 right-[34rem] w-8 h-20 md:w-8 md:h-40; animation-duration: 1.15s; }
-
-.balloon19 { @apply absolute top-0 right-[37rem] w-8 h-14 md:w-8 md:h-44; }
-.balloon20 { @apply absolute top-0 right-[40rem] w-8 h-18 md:w-8 md:h-36; animation-duration: 0.9s; }
-.balloon21 { @apply absolute top-0 right-[43rem] w-8 h-16 md:w-8 md:h-48; }
-
-.balloon22 { @apply absolute top-0 right-[46rem] w-8 h-20 md:w-8 md:h-40; animation-duration: 1.3s; }
-.balloon23 { @apply absolute top-0 right-[49rem] w-8 h-14 md:w-8 md:h-44; }
-.balloon24 { @apply absolute top-0 right-[52rem] w-8 h-20 md:w-8 md:h-40; animation-duration: 1.05s; }
-.balloon25 { @apply absolute top-0 right-[55rem] w-8 h-16 md:w-8 md:h-48; animation-duration: 1.2s; }
-.balloon26 { @apply absolute top-0 right-[58rem] w-8 h-18 md:w-8 md:h-36; animation-duration: 0.95s; }
-.balloon27 { @apply absolute top-0 right-[61rem] w-8 h-14 md:w-8 md:h-44; animation-duration: 1.1s; }
-.balloon28 { @apply absolute top-0 right-[64rem] w-8 h-20 md:w-8 md:h-40; animation-duration: 1.3s; }
 
 
 #floating-balloons {
@@ -51,15 +10,19 @@
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  z-index: 4; /* below text, above background */
+  height: 100vh;
+  width: 100vw;   /* ✅ FIX */
+  max-width: 100vw;
 }
+
 
 .float-balloon {
   position: absolute;
   bottom: -60px;
-  width: 14px;
-  height: 32px;
+  width: 12px;
+  height: 25px;
   opacity: 0.85;
+  overflow: hidden;
   will-change: transform;
 }
 

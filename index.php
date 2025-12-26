@@ -23,16 +23,7 @@ $guest = $q->fetch_assoc();
     <img src="./assets/space.jpg" class="tomb" alt="" />
   </div>
 
-  <div>
-    <img src="./assets/balloons.png" class="balloon-base balloon5" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon6" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon8" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon9" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon10" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon11" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon12" alt="" />
-    <img src="./assets/balloons.png" class="balloon-base balloon13" alt="" />
-  </div>
+ 
 
   <!-- floating balloons from bottom -->
   <div id="floating-balloons"></div>
@@ -42,7 +33,13 @@ $guest = $q->fetch_assoc();
     <p class="invite-text">
       By the grace and the dua mubarak of our beloved Aqa Maula T.U.S we cordially invite you to the celebration of
     </p>
-    <img src="./assets/1.png" alt="">
+    <div class="flex relative">
+      <img class="one" src="./assets/1.png" alt="">
+      <p class="invite-text absolute right-7 top-7">st</p>
+    </div>
+    <p class="invite-text">birthday of our son</p>
+    <p class="name">Hamza</p>
+    <p class="invite-text">Do bless our beloved child with your valuable presence.</p>
     <article>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +106,7 @@ $guest = $q->fetch_assoc();
       </svg>
       <p>Hatemi Masjid, Mazgaon</p>
     </article>
-
+    <img class="w-28 h-28 absolute object-cover right-1 -bottom-1 overflow-hidden" src="./assets/bob.png" alt="">
     <div class="arrow-container">
       <svg
         class="arrow"
@@ -138,7 +135,7 @@ $guest = $q->fetch_assoc();
     <input type="hidden" name="id" value="<?= $guest['id']; ?>">
 
     <p class="invite-text"><?= htmlspecialchars($guest['name']); ?></p>
-    <p class="invite-text"><?= htmlspecialchars($guest['invitees']); ?></p>
+    <p class="details-text">invitees: <?= htmlspecialchars($guest['Invitees']); ?></p>
 
     <main>Please give us your valuable RSVP</main>
 
@@ -147,7 +144,7 @@ $guest = $q->fetch_assoc();
       name="status"
       value="Accepted"
       class="bg-slate-900 text-white p-5 mt-3">
-      Inshaallah I will attend
+      Inshaallah, I will attend
     </button>
 
     <button
@@ -155,7 +152,7 @@ $guest = $q->fetch_assoc();
       name="status"
       value="Declined"
       class="bg-slate-900 text-white p-5 mt-3">
-      We are there by our heart, Mubarak mohannah
+      Regretfully I cannot attend, But heartily I wish you the best
     </button>
   </form>
 
