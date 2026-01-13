@@ -15,7 +15,7 @@ $guest = $q->fetch_assoc();
   <link rel="stylesheet" href="css/output.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <title>wedding card</title>
+  <title>Birthday invite</title>
 </head>
 
 <body>
@@ -143,7 +143,7 @@ $guest = $q->fetch_assoc();
       type="submit"
       name="status"
       value="Accepted"
-      class="bg-slate-900 text-white p-5 mt-3">
+      class="bg-slate-900 text-white p-3 m-3 rounded shadow-lg mt-3">
       Inshaallah, I will attend
     </button>
 
@@ -151,7 +151,7 @@ $guest = $q->fetch_assoc();
       type="submit"
       name="status"
       value="Declined"
-      class="bg-slate-900 text-white p-5 mt-3">
+      class="bg-slate-900 text-white p-3 m-3 rounded shadow-lg mt-3">
       Regretfully I cannot attend, But heartily I wish you the best
     </button>
   </form>
