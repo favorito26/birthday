@@ -130,3 +130,38 @@ main{
   
 }
 
+.thankyou{
+  @apply flex flex-col items-center justify-center w-full h-screen;
+  animation: fade-in 1s ease-in;
+}
+.thankyou h1{
+  @apply text-2xl text-center;
+  font-family: 'alkanz';
+  animation: popup 1s linear;
+}
+.thankyou h2{
+  @apply text-xl text-center;
+  font-family: 'alkanz';
+  animation: popup 1s linear;
+}
+
+@keyframes popup{
+  0%{
+    scale: 0%;
+  }
+  80%{
+    scale: 100%;
+  }
+  100%{
+    scale: 95%;
+  }
+}
+
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100;
+  }
+}
